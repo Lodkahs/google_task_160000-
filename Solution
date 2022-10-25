@@ -35,3 +35,6 @@ func findNumbers(n: Int, array: [Int]) {
 findNumbers(n: 7, array: array2)
 
 I know that this code might be faster and much shorter, but now it looks cool for me.
+
+
+//need to work more under code, cause it's not working with a different test 
