@@ -1,0 +1,37 @@
+I found a youtube video with a task:
+
+Find all pairs of numbers that in sum equal to a number in function
+
+something like
+
+let array2 = [2,3,6,1,3,4,5,0,7] //7
+
+So, here's my solution, so glad to find it :happy:
+
+var array2 = [2,3,6,1,3,4,5,0,7]
+
+func findNumbers(n: Int, array: [Int]) {
+
+    var foundPairsOfNumbers = [[Int]]() //array of arrays
+    var another = array2 //create a copy of a input array
+    
+    for i in another {
+    
+            var firstNumber = i //set first number
+            var secondNumber = n - firstNumber //set second number
+            if another.contains(secondNumber) {
+            
+                var newArr = [firstNumber, secondNumber]
+                foundPairsOfNumbers.append(newArr)
+                another.removeAll(where: {$0 == firstNumber}) //delete first number from array to repeat like [num1, num2], [num2, num2]
+                another.removeAll(where: {$0 == secondNumber}) //delete second number from array
+                
+            }
+        }
+    
+    print(foundPairsOfNumbers)
+}
+
+findNumbers(n: 7, array: array2)
+
+I know that this code might be faster and much shorter, but now it looks cool for me.
